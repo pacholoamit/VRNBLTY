@@ -34,11 +34,11 @@ const styles: localStyles = {
 
 
 const Popup = () => {
-    const { breaches, getBreach, url } = useBreach()
-    
+    const { breaches, getBreach, currentUrl } = useBreach()
+
     useEffect(() => {
         getBreach()
-    }, [url])
+    }, [currentUrl])
 
     return (
         <div style={styles.container}>
@@ -50,7 +50,7 @@ const Popup = () => {
                     </Title>
                 </Group>
                 <Container sx={{ backgroundColor: "#71959A", borderRadius: 25 }}>
-                    <Text color={"snow"}>{url}</Text>
+                    <Text color={"snow"}>{currentUrl}</Text>
                 </Container>
 
                 {breaches?.map((breach: Breach) => (

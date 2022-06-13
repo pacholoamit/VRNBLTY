@@ -3,14 +3,16 @@ import { useStorage } from "@plasmohq/storage"
 import type { Breach } from "../types"
 
 const useBreach = () => {
+    // const [url] = useStorage<null | string>("currentUrl")
     const [breaches, setBreaches] = useState<null | Breach[]>(null)
-    const [url] = useStorage<null | string>("currentUrl")
+    const [currentUrl, setCurrentUrl] = useState<string>("")
+
+
 
     const getBreach = async () => {
-        if (!url) return
-        const [tab] = await chrome.tabs.query({ active: true, currentWindow: true, lastFocusedWindow: true })
-        console.log(tab)
-        const reqBreach = `https://haveibeenpwned.com/api/v3/breaches/?domain=${url}`
+        const [tab] = await chrome.tabs.query({ active: true, currentWindow: true })
+        setCurrentUrl(tab.url)
+        const reqBreach = `https://haveibeenpwned.com/api/v3/breaches/?domain=${tab.url}`
         const response = await fetch(reqBreach).then((res) => res.json()) as Breach[]
 
         if (response.length > 0) {
@@ -19,7 +21,7 @@ const useBreach = () => {
 
     }
 
-    return { breaches, getBreach, url }
+    return { breaches, getBreach, currentUrl }
 }
 
 export default useBreach
