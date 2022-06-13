@@ -33,6 +33,7 @@
       "https://*/*"
     ],
     "permissions": [
+      "activeTab",
       "tabs",
       "storage"
     ]
