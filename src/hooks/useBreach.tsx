@@ -6,15 +6,13 @@ const useBreach = () => {
     const [domain, setDomain] = useState<string>("")
 
     const getBreach = async () => {
-        const [tab] = await chrome.tabs.query({ active: true, currentWindow: true })
-        const { hostname } = new URL(tab.url)
-        const [_, sld, tld] = hostname.split(".")
-        const domain = `${sld}.${tld}`
+        const [tab]: chrome.tabs.Tab[] = await chrome.tabs.query({ active: true, currentWindow: true })
+        const { hostname }: URL = new URL(tab.url)
+        const [_, sld, tld]: string[] = hostname.split(".")
+        const domain: string = `${sld}.${tld}`
         setDomain(hostname)
-        console.log(domain)
-        const reqBreach = `https://haveibeenpwned.com/api/v3/breaches/?domain=${domain}`
-        const response = await fetch(reqBreach).then((res) => res.json()) as Breach[]
-
+        const reqBreach: string = `https://haveibeenpwned.com/api/v3/breaches/?domain=${domain}`
+        const response: Breach[] = await fetch(reqBreach).then((res) => res.json()) as Breach[]
         if (response.length > 0) {
             setBreaches(response)
         }

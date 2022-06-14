@@ -1,4 +1,11 @@
-import { Center, Container, Group, Loader, ScrollArea, Stack, Text, Title } from "@mantine/core"
+import {
+    Container,
+    Group,
+    ScrollArea,
+    Stack,
+    Text,
+    Title
+} from "@mantine/core"
 import React, { useEffect } from "react"
 import { ShieldLock } from "tabler-icons-react"
 
@@ -6,7 +13,6 @@ import useBreach from "../hooks/useBreach"
 import type { Breach } from "../types"
 
 const BackgroundSvg = require("../../assets/bg.svg") as string
-
 
 interface localStyles {
     [key: string]: React.CSSProperties
@@ -31,7 +37,18 @@ const styles: localStyles = {
     }
 }
 
-
+interface BreachComponentProps {
+    breach: Breach
+}
+const BreachComponent: React.FC<BreachComponentProps> = ({ breach }) => {
+    return (
+        <ScrollArea style={{ height: 150, width: 250 }}>
+            <Text color={"snow"} size="xs">
+                {breach.Description}
+            </Text>
+        </ScrollArea>
+    )
+}
 
 const Popup = () => {
     const { breaches, getBreach, domain } = useBreach()
@@ -52,13 +69,9 @@ const Popup = () => {
                 <Container sx={{ backgroundColor: "#71959A", borderRadius: 25 }}>
                     <Text color={"snow"}>{domain}</Text>
                 </Container>
-
                 {breaches?.map((breach: Breach) => (
-                    <ScrollArea style={{ height: 150, width: 250, }}>
-                        <Text color={"snow"} size="xs">{breach.Description}</Text>
-                    </ScrollArea>
+                    <BreachComponent breach={breach} />
                 ))}
-
             </Stack>
         </div>
     )
