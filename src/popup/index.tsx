@@ -1,4 +1,4 @@
-import { Center, Container, Group, Loader, Stack, Text, Title } from "@mantine/core"
+import { Center, Container, Group, Loader, ScrollArea, Stack, Text, Title } from "@mantine/core"
 import React, { useEffect } from "react"
 import { ShieldLock } from "tabler-icons-react"
 
@@ -34,11 +34,11 @@ const styles: localStyles = {
 
 
 const Popup = () => {
-    const { breaches, getBreach, currentUrl } = useBreach()
+    const { breaches, getBreach, domain } = useBreach()
 
     useEffect(() => {
         getBreach()
-    }, [currentUrl])
+    }, [domain])
 
     return (
         <div style={styles.container}>
@@ -50,13 +50,13 @@ const Popup = () => {
                     </Title>
                 </Group>
                 <Container sx={{ backgroundColor: "#71959A", borderRadius: 25 }}>
-                    <Text color={"snow"}>{currentUrl}</Text>
+                    <Text color={"snow"}>{domain}</Text>
                 </Container>
 
                 {breaches?.map((breach: Breach) => (
-                    <Container sx={{ backgroundColor: "red", borderRadius: 25 }} key={breach.Name}>
-                        <Text color={"snow"}>{breach.Title}</Text>
-                    </Container>
+                    <ScrollArea style={{ height: 150, width: 250, }}>
+                        <Text color={"snow"} size="xs">{breach.Description}</Text>
+                    </ScrollArea>
                 ))}
 
             </Stack>
