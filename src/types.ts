@@ -16,3 +16,7 @@ export type Breach = {
     IsSpamList: boolean
     IsMalware: boolean
 }
+
+export interface styles {
+    [key: string]: React.CSSProperties
+}
