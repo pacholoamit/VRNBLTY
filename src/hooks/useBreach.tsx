@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { secureStatus, vulnerableStatus } from "../constants"
 import type { Breach } from "../types"
 
 const useBreach = () => {
@@ -15,7 +16,7 @@ const useBreach = () => {
         setDomain(hostname)
         const reqBreach = `https://haveibeenpwned.com/api/v3/breaches/?domain=${domain}`
         const response: Breach[] = await fetch(reqBreach).then((res) => res.json()) as Breach[]
-        response.length > 0 && setBreaches(response)
+        if (response.length > 0) setBreaches(response)
         setLoading(false)
     }
 
