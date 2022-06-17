@@ -8,10 +8,11 @@ import {
 } from "@mantine/core"
 import React, { useEffect } from "react"
 import { ShieldLock } from "tabler-icons-react"
-
 import useBreach from "../hooks/useBreach"
 import type { Breach } from "../types"
 
+const VulnerableStatus = require('../../assets/vulnerable.png') as string
+const SecureStatus = require('../../assets/secure.png') as string
 const BackgroundSvg = require("../../assets/bg.svg") as string
 
 interface localStyles {
@@ -34,6 +35,9 @@ const styles: localStyles = {
     },
     title: {
         color: "snow"
+    },
+    status: {
+        marginTop: 12
     }
 }
 
@@ -69,9 +73,7 @@ const Popup = () => {
                 <Container sx={{ backgroundColor: "#71959A", borderRadius: 25 }}>
                     <Text color={"snow"}>{domain}</Text>
                 </Container>
-                {breaches?.map((breach: Breach) => (
-                    <BreachComponent breach={breach} />
-                ))}
+                <img src={breaches ? VulnerableStatus : SecureStatus} width='100' style={styles.status} />
             </Stack>
         </div>
     )
