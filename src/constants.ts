@@ -1,3 +1,9 @@
-export const vulnerableStatus = require('../assets/vulnerable.png') as string
-export const secureStatus = require('../assets/secure.png') as string
-export const backgroundSvg = require("../assets/bg.svg") as string
+import vulnerableStatus from "data-base64:~assets/vulnerable.png"
+import secureStatus from "data-base64:~assets/secure.png"
+import backgroundSvg from "data-base64:~assets/bg.svg"
+
+export {
+    vulnerableStatus,
+    secureStatus,
+    backgroundSvg
+}
