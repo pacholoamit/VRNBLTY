@@ -2,7 +2,7 @@
   "name": "vrnblty",
   "displayName": "VRNBLTY",
   "version": "1.0.0",
-  "description": "A chrome extension that scans the current site for previous breaches",
+  "description": "A chrome extension that scans the current site for previous data breaches",
   "author": "Pacholo Amit",
   "scripts": {
     "dev": "plasmo dev",
@@ -33,9 +33,7 @@
       "https://*/*"
     ],
     "permissions": [
-      "activeTab",
-      "tabs",
-      "storage"
+      "tabs"
     ]
 
   }
