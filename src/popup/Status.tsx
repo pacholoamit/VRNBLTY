@@ -30,7 +30,7 @@ const Status: React.FC<StatusProps> = ({ breaches }) => {
         </ActionIcon>
     )
 
-    const onClick = () => setOpened(!opened)
+    const onClick = () => breaches && setOpened(!opened)
 
     return (
         <>
