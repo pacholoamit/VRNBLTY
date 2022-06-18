@@ -22,7 +22,7 @@ interface StatusProps {
 const Status: React.FC<StatusProps> = ({ breaches }) => {
     const [opened, setOpened] = React.useState<boolean>(false)
     const imageSrc = breaches ? vulnerableStatus : secureStatus
-    const badgeText = breaches ? `${breaches.length} data breach(es) have occured` : "No breaches"
+    const badgeText = breaches ? `${breaches.length} data breach(es)` : "No breaches"
     const badgeColor = breaches ? "red" : "green"
     const leftSection = (
         <ActionIcon size='xs' color={badgeColor} radius={'xl'} variant={'transparent'}>
