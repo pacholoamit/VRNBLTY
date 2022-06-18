@@ -1,9 +1,9 @@
-import { vulnerableStatus, secureStatus } from "../constants"
-import { Text, Stack, Button, Modal, ScrollArea, Badge, ActionIcon } from '@mantine/core'
-import type { Breach, styles } from "../types"
 import React from "react"
-import { Check, X } from "tabler-icons-react"
 import BreachDetails from "./BreachDetails"
+import { vulnerableStatus, secureStatus } from "../constants"
+import { Stack, Modal, ScrollArea, Badge, ActionIcon } from '@mantine/core'
+import { Check, X } from "tabler-icons-react"
+import type { Breach, styles } from "../types"
 
 const styles: styles = {
     statusText: {
@@ -36,7 +36,7 @@ const Status: React.FC<StatusProps> = ({ breaches }) => {
         <>
             <img src={imageSrc} width="120" />
             <Badge radius={'xl'} variant={'light'} color={badgeColor} onClick={onClick} leftSection={leftSection}>{badgeText}</Badge>
-            <Modal styles={{ modal: { backgroundColor: '#d53867' } }} opened={opened} withCloseButton={false} onClose={() => setOpened(false)}>
+            <Modal trapFocus={false} styles={{ modal: { backgroundColor: '#d53867' } }} opened={opened} withCloseButton={false} onClose={() => setOpened(false)}>
                 <ScrollArea style={styles.scrollArea}>
                     <Stack>
                         {breaches?.map((breach) => <BreachDetails breach={breach} key={breach.Name} />)}
