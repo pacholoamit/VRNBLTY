@@ -3,9 +3,9 @@
 A chrome extension that allows you to check the current website you are in to see if previous data breaches have occurred. The extension is powered by the [haveibeenpwned api](https://haveibeenpwned.com/)
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/69985528/174496517-2657aace-9370-4a8b-aba2-1b7b3161b1b8.png" width="33%" />
-  <img src="https://user-images.githubusercontent.com/69985528/174496590-88b23b30-7fc2-4178-8376-9b590e53fb7a.png" width="33%"/>
-  <img src="https://user-images.githubusercontent.com/69985528/174496608-85a4632a-e9c9-4912-b3ab-e656caf4c693.png" width="33%"/>
+  <img src="https://user-images.githubusercontent.com/69985528/174496517-2657aace-9370-4a8b-aba2-1b7b3161b1b8.png" width="200" />
+  <img src="https://user-images.githubusercontent.com/69985528/174496590-88b23b30-7fc2-4178-8376-9b590e53fb7a.png" width="200"/>
+  <img src="https://user-images.githubusercontent.com/69985528/174496608-85a4632a-e9c9-4912-b3ab-e656caf4c693.png" width="200"/>
 </p>
 
 
