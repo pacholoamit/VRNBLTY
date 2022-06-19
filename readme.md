@@ -10,7 +10,8 @@ A chrome extension that allows you to check the current website you are in to se
 
 ## Install
 
-_Extension is still currently pending for the Chrome extension store_
+Note: _Extension is still currently pending for the Chrome extension store. Clicking this won't do anything yet_
+<img src="https://storage.googleapis.com/web-dev-uploads/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/HRs9MPufa1J1h5glNhut.png" />
 
 ## Demo & Usage
 
