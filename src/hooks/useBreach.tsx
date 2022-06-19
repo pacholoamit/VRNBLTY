@@ -1,5 +1,4 @@
 import { useState } from "react"
-import { secureStatus, vulnerableStatus } from "../constants"
 import type { Breach } from "../types"
 
 const useBreach = () => {
