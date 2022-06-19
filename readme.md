@@ -14,7 +14,7 @@ A chrome extension that allows you to check the current website you are in to se
 
 I created a Youtube video showcasing the [Plasmo framework](https://www.plasmo.com/). A section of the video is devoted to showcasing the `VRNBLTY` extension as well. Feel free to check the youtube video down below.
 
-[![Youtube video](http://img.youtube.com/vi/Fa2nFDw-dBw/0.jpg)](http://www.youtube.com/watch?v=Fa2nFDw-dBw?t=707 "Create a Google Chrome extension with ReactJS | Plasmo quickstart tutorial")
+[![Youtube video](http://img.youtube.com/vi/Fa2nFDw-dBw/0.jpg)](https://youtu.be/Fa2nFDw-dBw?t=708 "Create a Google Chrome extension with ReactJS | Plasmo quickstart tutorial")
 
 ## Contributing
 
