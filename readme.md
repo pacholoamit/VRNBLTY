@@ -8,7 +8,9 @@ A chrome extension that allows you to check the current website you are in to se
   <img src="https://user-images.githubusercontent.com/69985528/174496608-85a4632a-e9c9-4912-b3ab-e656caf4c693.png" width="250"/>
 </p>
 
+## Install
 
+_Extension is still currently pending for the Chrome extension store_
 
 ## Demo & Usage
 
