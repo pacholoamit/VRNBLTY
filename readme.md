@@ -5,6 +5,8 @@ A chrome extension that allows you to check the current website you are in to se
 ![image](https://user-images.githubusercontent.com/69985528/174496517-2657aace-9370-4a8b-aba2-1b7b3161b1b8.png)
 ![image](https://user-images.githubusercontent.com/69985528/174496590-88b23b30-7fc2-4178-8376-9b590e53fb7a.png)
 ![image](https://user-images.githubusercontent.com/69985528/174496608-85a4632a-e9c9-4912-b3ab-e656caf4c693.png)
+![image](https://user-images.githubusercontent.com/69985528/174497033-f1b510c4-a2a3-4465-87a4-44581bac2043.png)
+
 
 
 ## Demo & Usage
