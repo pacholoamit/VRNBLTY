@@ -11,6 +11,9 @@ const styles: styles = {
     },
     scrollArea: {
         height: "150px"
+    },
+    badge: {
+        cursor: "pointer"
     }
 }
 
@@ -35,7 +38,7 @@ const Status: React.FC<StatusProps> = ({ breaches }) => {
     return (
         <>
             <img src={imageSrc} width="120" />
-            <Badge radius={'xl'} variant={'light'} color={badgeColor} onClick={onClick} leftSection={leftSection}>{badgeText}</Badge>
+            <Badge radius={'xl'} variant={'light'} color={badgeColor} onClick={onClick} style={styles.badge} leftSection={leftSection}>{badgeText}</Badge>
             <Modal trapFocus={false} styles={{ modal: { backgroundColor: '#d53867' } }} opened={opened} withCloseButton={false} onClose={() => setOpened(false)}>
                 <ScrollArea style={styles.scrollArea}>
                     <Stack>
