@@ -12,7 +12,7 @@ A chrome extension that allows you to check the current website you are in to se
 Get the extension for free on the Google Chrome store
 
 <a href="https://chrome.google.com/webstore/detail/vrnblty/bmdonmceopndhkoaekmghcmfkipkehla">
-<img src="https://storage.googleapis.com/web-dev-uploads/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/iNEddTyWiMfLSwFD6qGq.png" />
+<img src="https://developer.chrome.com/static/docs/webstore/branding/image/YT2Grfi9vEBa2wAPzhWa.png" />
 </a>
 
 ## Demo & Usage
